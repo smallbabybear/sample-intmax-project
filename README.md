@@ -1,13 +1,22 @@
 # Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+## How to Use
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
+```sh
 npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
+```
+
+Deploy Intmax contracts by intmax2 repository before running the following commands.
+
+```sh
+cp .env.example .env
+npx hardhat ignition deploy ./ignition/modules/UseIntmax.ts ---network localhost
+npx hardhat run ./scripts/useIntmax.ts --network localhost
+```
+
+Example output:
+
+```
+rollupContractAddress: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+latestBlockNumber: 355
 ```

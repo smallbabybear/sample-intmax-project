@@ -2,13 +2,11 @@
   "name": "sample-intmax-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "npx tsx src/index.ts",
-    "circulation": "npx tsx scripts/circulation.ts"
+    "start": "npx tsx src/index.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
@@ -18,9 +16,6 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "alchemy-sdk": "^3.4.7",
-    "chalk": "^5.3.0",
-    "date-fns": "^4.1.0",
     "dotenv": "^16.4.5",
     "envalid": "^8.0.0",
     "intmax2-contract": "^0.1.0",
