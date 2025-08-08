@@ -1,10 +1,8 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
+import { env } from "../../src/config";
 
 const UseIntmaxModule = buildModule("UseIntmaxModule", (m) => {
-  const rollupContractAddress = process.env.ROLLUP_CONTRACT_ADDRESS;
-  const mRrollupContractAddress = m.getParameter("rollupContractAddress", rollupContractAddress);
-
-  const rollup = m.contract("UseIntmax", [mRrollupContractAddress]);
+  const rollup = m.contract("UseIntmax", [env.ROLLUP_CONTRACT_ADDRESS]);
 
   return { rollup };
 });

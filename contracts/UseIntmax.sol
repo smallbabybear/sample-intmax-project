@@ -4,9 +4,12 @@ pragma solidity ^0.8.27;
 import {IRollup} from "intmax2-contract/contracts/rollup/IRollup.sol";
 
 contract UseIntmax {
-    IRollup public rollup;
+    IRollup public immutable rollup;
 
     constructor(IRollup _rollup) {
+        if (address(_rollup) == address(0)) {
+            revert("Invalid rollup contract address");
+        }
         rollup = _rollup;
     }
 
